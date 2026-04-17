@@ -80,7 +80,7 @@ body:
   - type: input
     id: test
     attributes:
-      label: Test case liên quan
+      label: Test 
       placeholder: "TC-02"
 
   - type: dropdown
