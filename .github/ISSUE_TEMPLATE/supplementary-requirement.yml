@@ -1,0 +1,89 @@
+name: "🔒 Supplementary Requirement"
+description: "Yêu cầu phi chức năng (Non-functional requirements)"
+title: "[SUP-XX] "
+labels: ["SR", "non-functional"]
+assignees: []
+
+body:
+  - type: input
+    id: sup_id
+    attributes:
+      label: SUP ID
+      placeholder: "SUP-01"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Loại yêu cầu (Requirement Type)
+      options:
+        - Performance (Hiệu năng)
+        - Security (Bảo mật)
+        - Usability (Khả dụng)
+        - Reliability (Độ tin cậy)
+        - Availability (Khả dụng)
+        - Maintainability (Bảo trì)
+        - Scalability (Khả năng mở rộng)
+        - Compliance (Tuân thủ)
+        - Interface (Giao diện/Giao tiếp)
+    
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Mô tả 
+      placeholder: "Trang danh sách và chi tiết sản phẩm phải tải trong < 2 giây với lưu lượng thông thường."
+    
+
+  
+    
+
+  - type: textarea
+    id: related_features
+    attributes:
+      label: Feature liên quan
+      description: "Các Feature chịu ảnh hưởng bởi yêu cầu này"
+      placeholder: "FEAT-01, FEAT-02"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (Độ ưu tiên)
+      options:
+        - High
+        - Medium
+        - Low
+    
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty (Độ khó)
+      options:
+        - Low
+        - Medium
+        - High
+
+  - type: dropdown
+    id: stability
+    attributes:
+      label: Stability (Độ ổn định)
+      options:
+        - Ổn định
+        - Có thể thay đổi
+
+  - type: input
+    id: assigned_to
+    attributes:
+      label: Assigned to (Nhóm phụ trách)
+      placeholder: "Nhóm Backend"
+
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Cost (Chi phí ước lượng)
+      options:
+        - Low
+        - Medium
+        - High
