@@ -72,23 +72,6 @@ body:
       description: "Nguồn gốc yêu cầu"
       placeholder: "Khách hàng"
 
-  - type: textarea
-    id: related_features
-    attributes:
-      label: FEAT liên quan
-      description: "Các Feature đáp ứng Need này"
-      placeholder: "FEAT1, FEAT2"
+  
 
-  - type: textarea
-    id: related_uc
-    attributes:
-      label: USE CASE liên quan
-      description: "Các Use Case liên quan"
-      placeholder: "UC-02"
-
-  - type: textarea
-    id: related_supl
-    attributes:
-      label: SUPL liên quan
-      description: "Các Supplementary Requirements liên quan"
-      placeholder: "SUP-01, SUP-04"
+  
