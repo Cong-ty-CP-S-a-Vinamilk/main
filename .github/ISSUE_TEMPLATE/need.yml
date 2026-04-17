@@ -52,8 +52,7 @@ body:
       label: Mô tả Need
       description: "Yêu cầu cụ thể từ Stakeholder"
       placeholder: "Khách hàng muốn tìm kiếm và xem thông tin sản phẩm sữa Vinamilk trên website một cách nhanh chóng."
-    validations:
-      required: true
+    
 
   - type: dropdown
     id: priority
