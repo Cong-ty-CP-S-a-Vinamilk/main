@@ -1,0 +1,149 @@
+name: "📋 Use Case"
+description: "Ca sử dụng – yêu cầu chức năng chi tiết"
+title: "[UC-XX] "
+labels: ["use-case", "RS"]
+assignees: []
+
+body:
+  - type: input
+    id: uc_id
+    attributes:
+      label: Use Case ID
+      placeholder: "UC-02"
+    validations:
+      required: true
+
+  - type: input
+    id: uc_name
+    attributes:
+      label: Tên Use Case
+      placeholder: "Tạo yêu cầu mua hàng"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: actor
+    attributes:
+      label: Actor (Tác nhân chính)
+      options:
+        - Khách hàng (Customer)
+        - Quản trị viên (Admin)
+        - Ban Lãnh đạo Vinamilk
+        - Phòng Marketing Vinamilk
+        - Phòng Kho vận (Logistics)
+        - Bộ phận CSKH (Customer Service)
+        - Hệ thống AI
+        - Hệ thống
+    
+
+  - type: textarea
+    id: related_features
+    attributes:
+      label: Feature ánh xạ (Kế thừa Feature)
+      description: "Các Feature liên quan đến Use Case này"
+      placeholder: "FEAT-01, FEAT-02"
+    
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Mô tả Use Case
+      placeholder: "Nhân viên tạo yêu cầu mua sản phẩm trên hệ thống"
+    
+
+  - type: input
+    id: property
+    attributes:
+      label: Property (Thuộc tính/Phân loại)
+      placeholder: "Nghiệp vụ mua hàng"
+
+  - type: dropdown
+    id: affects_architecture
+    attributes:
+      label: Affects Architecture (Ảnh hưởng kiến trúc)
+      options:
+        - Có
+        - Không
+
+  - type: input
+    id: planned_iteration
+    attributes:
+      label: Planned Iteration
+      placeholder: "Sprint 1"
+
+  - type: input
+    id: assigned_to
+    attributes:
+      label: Assigned to
+      placeholder: "Phòng mua hàng"
+
+  - type: input
+    id: test
+    attributes:
+      label: Test case liên quan
+      placeholder: "TC-02"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - Low
+        - Medium
+        - High
+
+  - type: dropdown
+    id: stability
+    attributes:
+      label: Stability
+      options:
+        - Ổn định
+        - Có thể thay đổi
+
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Cost
+      options:
+        - Low
+        - Medium
+        - High
+
+  - type: textarea
+    id: main_flow
+    attributes:
+      label: Luồng chính (Main Flow)
+      placeholder: |
+        1. Actor đăng nhập hệ thống
+        2. Chọn chức năng tạo yêu cầu
+        3. Nhập thông tin sản phẩm
+        4. Xác nhận và gửi yêu cầu
+
+  - type: textarea
+    id: alternative_flow
+    attributes:
+      label: Luồng thay thế / ngoại lệ
+      placeholder: "Thiếu thông tin bắt buộc → Hiển thị thông báo lỗi"
+
+  - type: textarea
+    id: pre_condition
+    attributes:
+      label: Điều kiện tiên quyết (Pre-condition)
+      placeholder: "Actor đã đăng nhập và có quyền truy cập"
+
+  - type: textarea
+    id: post_condition
+    attributes:
+      label: Kết quả / Hậu điều kiện (Post-condition)
+      placeholder: "Yêu cầu mua được tạo và lưu vào hệ thống"
