@@ -86,13 +86,7 @@ body:
         - Verified
         - Done
 
-  - type: input
-    id: assigned_to
-    attributes:
-      label: Assigned to
-      description: "Nhóm/Người phụ trách"
-      placeholder: "Nhóm Frontend"
-
+  
   - type: textarea
     id: rationale
     attributes:
