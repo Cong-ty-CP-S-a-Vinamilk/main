@@ -1,78 +1,95 @@
----
-name: "📋 NEED - Nhu cầu nghiệp vụ"
-about: Template cho việc tạo issue mô tả nhu cầu nghiệp vụ cấp cao
-title: "[NEED] Tiêu đề nhu cầu"
-labels: ["need", "business-requirement", "high-level"]
-assignees: ""
----
+name: "🧩 Business Need"
+description: "Nhu cầu nghiệp vụ cấp cao (Needs) từ các Stakeholder"
+title: "[NEED-XX] "
+labels:
+  - need
+assignees: []
 
-## 📊 THÔNG TIN NHU CẦU
+body:
+  - type: input
+    id: need_id
+    attributes:
+      label: Need ID
+      description: "Mã số định danh cho Need (từ file Excel)"
+      placeholder: "STRQ-01"
+    validations:
+      required: true
 
-### 🔗 ID Nhu cầu
-- **Mã Need:** NEED-XX (tự động generate)
+  - type: dropdown
+    id: stakeholder
+    attributes:
+      label: Stakeholder nguồn gốc
+      description: "Bên liên quan đưa ra yêu cầu"
+      options:
+        - Khách hàng (Customer)
+        - Ban Lãnh đạo Vinamilk
+        - Phòng Marketing Vinamilk
+        - Phòng Kho vận (Logistics)
+        - Bộ phận CSKH (Customer Service)
+        - Quản trị viên (Admin)
+    validations:
+      required: true
 
-### 🎯 Mô tả Nhu cầu
-*Mô tả ngắn gọn nhu cầu nghiệp vụ cấp cao:*
+  - type: dropdown
+    id: collection_method
+    attributes:
+      label: Kỹ thuật thu thập yêu cầu
+      options:
+        - Bảng câu hỏi điều tra
+        - Hội thảo
+        - Phỏng vấn
+        - Thẻ sự kiện
+        - Phân tích tài liệu
+        - Phân tích dữ liệu
+        - Hội thảo chiến lược
+        - Hội thảo chiến lược AI
+    validations:
+      required: true
 
-### 📋 Nguồn gốc (Stakeholders)
-- **Stakeholder chính:** 
-- **Stakeholder phụ:**
-- **Phương pháp thu thập:** [Phỏng vấn/Workshop/Khảo sát/Document Analysis]
+  - type: textarea
+    id: description
+    attributes:
+      label: Mô tả Need
+      description: "Yêu cầu cụ thể từ Stakeholder"
+      placeholder: "Khách hàng muốn tìm kiếm và xem thông tin sản phẩm sữa Vinamilk trên website một cách nhanh chóng."
+    validations:
+      required: true
 
-### 📈 Bối cảnh & Lý do
-*Tại sao nhu cầu này quan trọng:*
-- **Vấn đề hiện tại:**
-- **Cơ hội kinh doanh:**
-- **Ảnh hưởng đến ai:**
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Stakeholder Priority
+      options:
+        - H (High - Cao)
+        - M (Medium - Trung bình)
+        - L (Low - Thấp)
+    validations:
+      required: true
 
-### 🎯 Mục tiêu Kinh doanh (KPIs)
-| KPI | Mục tiêu | Cách đo lường |
-|-----|----------|---------------|
-|     |          |               |
-|     |          |               |
+  - type: input
+    id: origin
+    attributes:
+      label: Origin
+      description: "Nguồn gốc yêu cầu"
+      placeholder: "Khách hàng"
 
-### 📊 Phân tích Tác động
-- **Độ ưu tiên:** [Rất cao/Cao/Trung bình/Thấp]
-- **Ảnh hưởng doanh thu:**
-- **Ảnh hưởng khách hàng:**
-- **Rủi ro nếu không thực hiện:**
+  - type: textarea
+    id: related_features
+    attributes:
+      label: FEAT liên quan
+      description: "Các Feature đáp ứng Need này"
+      placeholder: "FEAT1, FEAT2"
 
-### 🔗 Liên kết đến Requirements
-- **Features liên quan:** [Danh sách các Features thực hiện]
-- **Use Cases liên quan:** [Danh sách các Use Cases]
-- **Stories liên quan:** [Danh sách các User Stories]
+  - type: textarea
+    id: related_uc
+    attributes:
+      label: USE CASE liên quan
+      description: "Các Use Case liên quan"
+      placeholder: "UC-02"
 
-### 📝 Tiêu chí Chấp nhận (Acceptance Criteria)
-1. [Tiêu chí 1 - Định tính]
-2. [Tiêu chí 2 - Định lượng]
-3. [Tiêu chí 3 - Business Value]
-
-### 🏷️ Phân loại
-- **Loại Need:** [Tăng trưởng/Tối ưu/Trải nghiệm/An toàn/Cải tiến]
-- **Phạm vi:** [Toàn hệ thống/Module cụ thể]
-- **Thời hạn:** [Q1/Q2/Q3/Q4/Năm]
-
-### 📎 Tài liệu đính kèm
-- [ ] Biên bản phỏng vấn
-- [ ] Tài liệu phân tích
-- [ ] Báo cáo khảo sát
-- [ ] Prototype/Mockup
-
----
-
-## ✅ CHECKLIST PHÊ CHUẨN
-- [ ] **CLEAR:** Nhu cầu được phát biểu rõ ràng, không mơ hồ
-- [ ] **CORRECT:** Phản ánh đúng nhu cầu stakeholder
-- [ ] **CONSISTENT:** Không mâu thuẫn với needs khác
-- [ ] **COMPLETE:** Mô tả đầy đủ bối cảnh và mục tiêu
-- [ ] **FEASIBLE:** Khả thi về công nghệ và nguồn lực
-- [ ] **TESTABLE:** Có thể đo lường kết quả
-- [ ] **TRACEABLE:** Có thể truy vết nguồn gốc
-
----
-
-## 📋 ACTION ITEMS
-- [ ] Assign cho Business Analyst
-- [ ] Schedule meeting với stakeholder
-- [ ] Cập nhật Requirements Traceability Matrix
-- [ ] Review bởi Product Owner
+  - type: textarea
+    id: related_supl
+    attributes:
+      label: SUPL liên quan
+      description: "Các Supplementary Requirements liên quan"
+      placeholder: "SUP-01, SUP-04"
