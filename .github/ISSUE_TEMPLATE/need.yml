@@ -30,21 +30,7 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: collection_method
-    attributes:
-      label: Kỹ thuật thu thập yêu cầu
-      options:
-        - Bảng câu hỏi điều tra
-        - Hội thảo
-        - Phỏng vấn
-        - Thẻ sự kiện
-        - Phân tích tài liệu
-        - Phân tích dữ liệu
-        - Hội thảo chiến lược
-        - Hội thảo chiến lược AI
-    validations:
-      required: true
+  
 
   - type: textarea
     id: description
