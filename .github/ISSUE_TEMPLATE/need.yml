@@ -15,6 +15,7 @@ body:
     validations:
       required: true
 
+  
   - type: dropdown
     id: stakeholder
     attributes:
@@ -30,16 +31,6 @@ body:
     validations:
       required: true
 
-  
-
-  - type: textarea
-    id: description
-    attributes:
-      label: Mô tả Need
-      description: "Yêu cầu cụ thể từ Stakeholder"
-      placeholder: "Khách hàng muốn tìm kiếm và xem thông tin sản phẩm sữa Vinamilk trên website một cách nhanh chóng."
-    
-
   - type: dropdown
     id: priority
     attributes:
@@ -50,6 +41,17 @@ body:
         - L (Low - Thấp)
     validations:
       required: true
+
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Mô tả Need
+      description: "Yêu cầu cụ thể từ Stakeholder"
+      placeholder: "Khách hàng muốn tìm kiếm và xem thông tin sản phẩm sữa Vinamilk trên website một cách nhanh chóng."
+    
+
+  
 
   - type: input
     id: origin
