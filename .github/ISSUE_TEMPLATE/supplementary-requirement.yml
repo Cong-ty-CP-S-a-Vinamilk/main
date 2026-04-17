@@ -57,6 +57,18 @@ body:
     
 
   - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Proposed
+        - In Progress
+        - Implemented
+        - Verified
+        - Done
+
+        
+  - type: dropdown
     id: difficulty
     attributes:
       label: Difficulty (Độ khó)
